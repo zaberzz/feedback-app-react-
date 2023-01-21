@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { useContext } from "react";
 import FeedbackContext from "../context/FeedbackContext";
 
-function FeedbackList({ handleDelete }) {
+function FeedbackList() {
   const { feedback } = useContext(FeedbackContext);
   if (!feedback || feedback.length === 0) {
     return <p>no feedback yet</p>;
@@ -21,7 +21,7 @@ function FeedbackList({ handleDelete }) {
         //   exit={{ opacity: 0 }}
         //   layout
         // >
-        <FeedbackItem key={item.id} item={item} handleDelete={handleDelete} />
+        <FeedbackItem key={item.id} item={item} />
         // </motion.div>
       ))}
       {/* </AnimatePresence> */}
